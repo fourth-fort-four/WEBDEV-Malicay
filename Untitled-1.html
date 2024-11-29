@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <!-- Background Container -->
+  <div class="background">
+    <!-- Login Form Centered using Bootstrap Grid -->
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <div class="col-12 col-md-6 col-lg-4 login-box">
+            <h2 class="text-center login-text fw-bolder">LOGIN</h2>
+            <form id="loginForm" class="row g-3" action="Untitled-2.php" method="post">
+
+              <div class="col-12 has-validation">
+                <input placeholder="Username" type="text" name="username" class="form-control" id="loginUsername"
+                  required>
+              </div>
+
+              <div class="col-12 has-validation">
+                <input placeholder="Password" type="password" name="password" class="form-control" id="loginPassword"
+                  required>
+              </div>
+
+              <div class="col-12 login-text-margin" style="margin-top: 10%;">
+                <button class="btn btn-primary w-100" type="submit" id="loginBtn">Submit</button>
+              </div>
+              <!-- <div class="col-12">
+                              <p class="small mb-0 text-center"><a href="forgotpassword.html">Forgot password?</a></p>
+                            </div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Alert JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
