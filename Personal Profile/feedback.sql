@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2024 at 03:05 PM
+-- Generation Time: Dec 11, 2024 at 07:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,38 +18,42 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `malicay`
+-- Database: `feedback_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `names`
+-- Table structure for table `feedback`
 --
 
-CREATE TABLE `names` (
-  `usernames` varchar(8) DEFAULT NULL,
-  `password` varchar(8) NOT NULL,
-  `userID` int(8) NOT NULL,
-  `date` int(8) NOT NULL
+CREATE TABLE `feedback` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `names`
---
-
-INSERT INTO `names` (`usernames`, `password`, `userID`, `date`) VALUES
-('admin', 'admin', 2, 12);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `names`
+-- Indexes for table `feedback`
 --
-ALTER TABLE `names`
-  ADD PRIMARY KEY (`userID`);
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

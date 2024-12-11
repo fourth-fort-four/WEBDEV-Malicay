@@ -17,6 +17,25 @@ section:not(:first-of-type){
 section:nth-child(2n){
     background-color: cadetblue;
 }   
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+    color: cadetblue;
+}
+
+section .card,
+.btn-outline-dark{
+border: 2px solid #000000;
+box-shadow: 4px 4px #000000;
+transition: all 0.5s;
+}
+section .card,
+.btn-outline-dark:hover{
+box-shadow: 4px 4px #000000;
+}
 /*NAVBAR*/
 
 .navbar {
@@ -26,6 +45,10 @@ section:nth-child(2n){
 .navbar-nav .nav-link {
  color: #000000;
  font-size: 1.1rem;
+ transition: all 0.5s;
+}
+.navbar-nav .nav-link:hover {
+    color: cadetblue;
 }
 @media screen and (min-width: 1024px) {
 .navbar-nav .nav-item {
@@ -81,3 +104,10 @@ section.projects .card img{
 max-width: 70%;
 margin: 1rem auto;
 }
+
+/*CONTACTS*/
+section.contacts .social-media a {
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+}
+
